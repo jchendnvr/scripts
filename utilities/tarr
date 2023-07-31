@@ -1,0 +1,13 @@
+#!/bin/bash
+# Author: Jesse Chenhalls
+# Created Date: 20230731
+# will take a series of .tgz files and untar them each to their own directory. 
+
+dirname=''
+for i in $(ls) 
+	do dirname=$(echo $i | awk -F '.tgz' '{print $1}') 
+	echo $dirname 
+	mkdir $dirname 
+	tar xvzf $i -C $dirname;
+done
+dirname=''

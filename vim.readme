@@ -1,0 +1,51 @@
+vim.readme
+Author: Jesse Chenhalls
+Created Date: 20230731
+
+vimrc cheatsheet
+
+2022/1/18 20:00 MDT 
+
+The below is a primer meant to help you understand the vimme.sh and the vimrc it creates. 
+
+The vimme.sh file does the following. 
+- copies the .vimrc file to the users root directory. 
+- Creates a .vim dir in the users directory. 
+- downloads multiple plugins into that .vim directory. 
+- Next it sets up fzf fuzzy search and batcat for syntax highlighting. 
+- it binds fuzzy search at the shell to f 
+
+The vimrc file does the following. 
+- attempts to load the tender theme, but falls back to builtin elflord if it can't. 
+- sets some default behavior such as line numbers, tab width, and to ignore case sensitivity when searching. 
+- it maps the leader key to the space bar. 
+
+- it enables folding of entire sections by enclosing them in {{{ and }}}
+- you then use space + c to close and space + o to open the fold. 
+
+- it sets highlight for the current line to solid black and the line number to blue. 
+- sets search highlight to red letters with white background. 
+- enables the mouse mode inside vim, can be toggled with ctrl+m. Scroll wheel is your friend. 
+
+- space + h is history
+- space + f is open files
+- space + l lists buffers
+- press bc to create a buffer
+- bd to close ( delete ) the current buffer
+- bn to go to next buffer
+- bl to list the buffers as well. Type the number of the buffer and hit enter. 
+
+
+- tc to create a new tab
+- tn to go to next tab
+- bd will close the tab buffer
+- I use byobu tmux so if I want split windows I will use that. I do not split windows in vim itself. 
+
+- ctrl + n to toggle nerdtree file tree on the left. 
+
+- f to open fzf fuzzy search
+- ctrl + p will open ctrlp plugin which is a fuzzy search 
+- fuzzy search and ctrlp have their own benefits. I like fzf for searching across things. Ctrl p for searching in that directory. 
+- the goal is you search for another document and open them. 
+
+Goal: The goal of all these is that you can open multiple files in different buffers or tabs, search for and find new files, and generally work much quicker than with other editors. 
